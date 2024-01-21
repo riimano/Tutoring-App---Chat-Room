@@ -52,97 +52,99 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 25,
-                ),
-
-                //logo
-                Icon(
-                  Icons.message,
-                  size: 100,
-                  color: Colors.grey[800],
-                ),
-
-                const SizedBox(
-                  height: 25,
-                ),
-
-                //create a new account
-                const Text(
-                  'Create a new account!',
-                  style: TextStyle(
-                    fontSize: 16,
+        child: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 25,
                   ),
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-                //email text field
-                MyTextField(
-                    controller: emailController,
-                    hintText: 'Email',
-                    obscureText: false),
 
-                const SizedBox(
-                  height: 25,
-                ),
+                  //logo
+                  Icon(
+                    Icons.message,
+                    size: 100,
+                    color: Colors.grey[800],
+                  ),
 
-                // passowrd text field
+                  const SizedBox(
+                    height: 25,
+                  ),
 
-                MyTextField(
-                    controller: passowrdController,
-                    hintText: 'Password',
-                    obscureText: true),
-
-                const SizedBox(
-                  height: 25,
-                ),
-
-                // confirm passowrd
-
-                MyTextField(
-                    controller: confirmPasswordController,
-                    hintText: 'Confirm Password',
-                    obscureText: true),
-
-                const SizedBox(
-                  height: 25,
-                ),
-
-                //sign up button
-                MyButton(onTap: signUp, text: 'Sign Up'),
-
-                const SizedBox(
-                  height: 25,
-                ),
-
-                //  already a member? login now
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Already a member?',
+                  //create a new account
+                  const Text(
+                    'Create a new account!',
+                    style: TextStyle(
+                      fontSize: 16,
                     ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    GestureDetector(
-                      onTap: widget.onTap,
-                      child: const Text(
-                        'Login now',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  //email text field
+                  MyTextField(
+                      controller: emailController,
+                      hintText: 'Email',
+                      obscureText: false),
+
+                  const SizedBox(
+                    height: 25,
+                  ),
+
+                  // passowrd text field
+
+                  MyTextField(
+                      controller: passowrdController,
+                      hintText: 'Password',
+                      obscureText: true),
+
+                  const SizedBox(
+                    height: 25,
+                  ),
+
+                  // confirm passowrd
+
+                  MyTextField(
+                      controller: confirmPasswordController,
+                      hintText: 'Confirm Password',
+                      obscureText: true),
+
+                  const SizedBox(
+                    height: 25,
+                  ),
+
+                  //sign up button
+                  MyButton(onTap: signUp, text: 'Sign Up'),
+
+                  const SizedBox(
+                    height: 25,
+                  ),
+
+                  //  already a member? login now
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Already a member?',
                       ),
-                    ),
-                  ],
-                )
-              ],
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      GestureDetector(
+                        onTap: widget.onTap,
+                        child: const Text(
+                          'Login now',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
