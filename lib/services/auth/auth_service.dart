@@ -29,6 +29,20 @@ class AuthService extends ChangeNotifier {
 
       return userCredential;
     }
+    //   Future<void> saveUserInfoToFirebase(
+    //     String userId, String userName, String email) async {
+    //   try {
+    //     await FirebaseFirestore.instance.collection('users').doc(userId).set(
+    //       {
+    //         'username': userName,
+    //         'email': email,
+    //         'userLocation': null,
+    //       },
+    //     );
+    //   } catch (e) {
+    //     throw AuthException(e.toString());
+    //   }
+    // }
     //catch any errors
     on FirebaseAuthException catch (e) {
       throw Exception(e.code);
